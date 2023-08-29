@@ -1,0 +1,199 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[3]!./src/app/components/FormContactUs.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+.input-parent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-parent p {
+  display: none;
+}
+
+.contact-summary {
+  padding: 20px;
+  text-align: left;
+  display: grid;
+  position: relative;
+}
+
+.contact-summary input {
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+form {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+textarea {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+form button {
+  padding: 10px;
+  width: 200px;
+  border-radius: 15px;
+  background-color: #981e16;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform ease-in-out 0.3s, background-color ease-in-out 0.3s;
+}
+
+form button:hover {
+  transform: scale(90%);
+  background-color: black;
+}
+
+textarea {
+  width: 100%;
+}
+.error {
+  border-color: red;
+  transition: background-color 15s;
+  display: block;
+}
+
+.error-tag {
+  position: absolute;
+  bottom: -40px;
+  left: 20px;
+}
+@media (max-width: 990px) {
+  form {
+    align-items: center;
+  }
+  .contact-summary {
+    text-align: center;
+  }
+  form button {
+    width: 80%;
+  }
+  .error-tag {
+    position: absolute;
+    bottom: -30px;
+    left: 0px;
+    right: 0px;
+  }
+}
+
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[3]!./src/app/components/FormError.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+.error-container {
+  position: fixed;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  left: 0px;
+  right: 0px;
+  transition: transform ease-in-out 0.35s, opacity 0.15s;
+}
+
+.error-container[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(-20%);
+}
+
+.error-container[data-visible="false"] {
+  opacity: 0;
+  transform: translateY(0%);
+}
+
+.error-name {
+  max-width: 400px;
+  text-align: center;
+  background-color: black;
+  padding: 50px;
+  border-radius: 20px;
+  color: white;
+}
+
+@media (max-width: 990px) {
+  .error-name {
+    right: 30px;
+    left: 20px;
+    z-index: 99999;
+  }
+}
+
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[3]!./src/app/contact-us/ContactUs.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+.contact-container {
+  display: flex;
+  gap: 10px;
+  align-items: top;
+  justify-content: space-between;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.contact-info {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.contact-card h1 {
+  text-align: left;
+}
+
+.contact-card {
+  background-color: #981e16;
+  padding: 20px;
+  color: white;
+  width: 50%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  display: grid;
+
+  place-items: right;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-card img {
+  width: 30px;
+}
+
+@media (max-width: 990px) {
+  .contact-card {
+    width: 100%;
+  }
+  .contact-card h1 {
+    text-align: center;
+  }
+  .contact-container {
+    text-align: center;
+    flex-direction: column-reverse;
+    margin-top: 20px;
+  }
+  .contact-container li {
+    list-style: none;
+  }
+  .contact-info {
+    flex-direction: column;
+  }
+  .li-disable {
+    display: none;
+  }
+}
+

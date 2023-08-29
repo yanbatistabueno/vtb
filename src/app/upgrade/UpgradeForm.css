@@ -1,0 +1,81 @@
+.form-container {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  position: relative;
+}
+.upgrade-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.upgrade-form select {
+  width: 200px;
+}
+
+.upgrade-form input,
+.upgrade-form select {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.dual-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+form button {
+  padding: 10px;
+  width: 200px;
+  border-radius: 15px;
+  background-color: #981e16;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform ease-in-out 0.3s, background-color ease-in-out 0.3s;
+}
+
+form button:hover {
+  transform: scale(90%);
+  background-color: black;
+}
+
+.error {
+  border-color: red;
+  transition: background-color 15s;
+}
+
+.select-info {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.obrigatorio {
+  font-size: 10px;
+}
+
+@media (max-width: 990px) {
+  .upgrade-form {
+    align-items: normal;
+  }
+  .form-container h2 {
+    text-align: center;
+  }
+  .dual-inputs {
+    grid-template-columns: 1fr;
+  }
+  form button {
+    width: 100%;
+  }
+  .upgrade-form select {
+    width: 100%;
+  }
+  .upgrade-tag-error {
+    text-align: center;
+  }
+}

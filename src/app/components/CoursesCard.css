@@ -1,0 +1,53 @@
+.course-card {
+  border: solid 1px #981e16;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+  background-color: white;
+  transition: all ease-in-out 0.15s;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.anchor-course {
+  color: white;
+  width: 120px;
+
+  text-align: center;
+  background-color: #981e16;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color ease-in-out 0.15s, transform ease-in-out 0.15s;
+}
+
+.anchor-course:hover {
+  background-color: black;
+  transform: scale(90%);
+}
+
+.course-card:hover {
+  border-color: black;
+}
+.course-card-tag {
+  display: flex;
+  gap: 10px;
+}
+.course-card-tag button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0px;
+}
+
+@media (max-width: 990px) {
+  main h1 {
+    text-align: center;
+  }
+  .anchor-course {
+    width: 100%;
+  }
+  .filtred-courses h2 {
+    text-align: center;
+  }
+}

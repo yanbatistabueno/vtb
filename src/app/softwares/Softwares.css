@@ -1,0 +1,16 @@
+.software-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 990px) {
+  .software-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    place-items: center;
+  }
+}

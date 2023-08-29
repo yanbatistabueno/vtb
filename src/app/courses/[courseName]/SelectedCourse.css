@@ -1,0 +1,96 @@
+.selected-course {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.course-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.course-info-container ul li {
+  font-size: 0.9rem;
+}
+
+.course-info-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.selected-course h1 {
+  text-align: left;
+}
+
+.anchor-button {
+  padding: 10px;
+  background-color: transparent;
+  border-style: none;
+  color: white;
+  background-color: #981e16;
+
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color ease-in-out 0.15s, transform ease-out 0.15s;
+}
+
+.anchor-button:hover {
+  background-color: black;
+  transform: scale(90%);
+}
+
+.anchor-links {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.anchor-links a {
+  color: white;
+  width: 300px;
+  text-align: center;
+}
+
+.anchor-links {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.anchor-links button {
+  width: 300px;
+}
+.anchor-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.anchor-icon {
+  width: 30px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.anchor-icon img {
+  width: 100%;
+}
+
+@media (max-width: 990px) {
+  .course-info-container ul {
+    list-style-position: inside;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .course-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

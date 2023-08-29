@@ -1,0 +1,214 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[3]!./src/app/components/SoftwareCard.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+.software-card {
+  max-width: 1000px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 5px;
+  border-color: #981e16;
+  border-style: solid;
+  padding: 15px;
+  border-width: 1px;
+
+  text-align: left;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+  display: grid;
+
+  grid-gap: 10px;
+
+  gap: 10px;
+  place-items: start normal;
+}
+
+.software-image-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.anchor-software-container {
+  width: 20%;
+}
+
+.anchor-software {
+  display: block;
+  color: white;
+  width: 120px;
+  text-align: center;
+  background-color: #981e16;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color ease-in-out 0.15s, transform ease-in-out 0.15s;
+}
+
+.anchor-software:hover {
+  transform: scale(90%);
+  background-color: black;
+}
+
+.software-image {
+  width: 300px;
+  border-radius: 10px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.software-desc {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.software-tag {
+  display: flex;
+  align-items: center;
+}
+
+.software-tag button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1299px) {
+  .additional2 {
+    display: none;
+  }
+}
+
+@media (max-width: 990px) {
+  .software-card {
+    width: 300px;
+  }
+  .anchor-software {
+    width: 100%;
+  }
+  .additional {
+    display: none;
+  }
+}
+
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[3]!./src/app/components/CoursesCard.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+.course-card {
+  border: solid 1px #981e16;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+  background-color: white;
+  transition: all ease-in-out 0.15s;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.anchor-course {
+  color: white;
+  width: 120px;
+
+  text-align: center;
+  background-color: #981e16;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color ease-in-out 0.15s, transform ease-in-out 0.15s;
+}
+
+.anchor-course:hover {
+  background-color: black;
+  transform: scale(90%);
+}
+
+.course-card:hover {
+  border-color: black;
+}
+.course-card-tag {
+  display: flex;
+  gap: 10px;
+}
+.course-card-tag button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0px;
+}
+
+@media (max-width: 990px) {
+  main h1 {
+    text-align: center;
+  }
+  .anchor-course {
+    width: 100%;
+  }
+  .filtred-courses h2 {
+    text-align: center;
+  }
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[3]!./src/app/components/FiltredSearch.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+.inputs-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.inputs-container input,
+select {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  background-color: white;
+}
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+}
+.list-inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filtro-erro {
+  text-align: center;
+}
+
+@media (max-width: 990px) {
+  .inputs-container {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[3]!./src/app/softwares/Softwares.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+.software-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 990px) {
+  .software-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    gap: 20px;
+
+    place-items: center;
+  }
+}
+

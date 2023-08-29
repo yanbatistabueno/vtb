@@ -1,0 +1,22 @@
+.politics-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.politics-list-container {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #981e16;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.politics-list-container li {
+  list-style: inside;
+}

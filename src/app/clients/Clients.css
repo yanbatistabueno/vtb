@@ -1,0 +1,20 @@
+.clients-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.tag-container {
+  background-color: white;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #981e16;
+}
+
+@media (max-width: 990px) {
+  .clients-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+}

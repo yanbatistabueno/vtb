@@ -1,0 +1,38 @@
+.inputs-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.inputs-container input,
+select {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  background-color: white;
+}
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+}
+.list-inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filtro-erro {
+  text-align: center;
+}
+
+@media (max-width: 990px) {
+  .inputs-container {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}

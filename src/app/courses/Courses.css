@@ -1,0 +1,15 @@
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filtred-courses {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filtred-courses h1 {
+  text-align: left;
+}

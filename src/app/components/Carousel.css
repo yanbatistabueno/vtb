@@ -1,0 +1,25 @@
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.software-card {
+  width: 80%;
+}
+
+.swiper-pagination-bullet-active {
+  height: 9px;
+  width: 9px;
+}
+
+@media (max-width: 990px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+  .software-card {
+    width: 300px;
+  }
+}

@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Disallow: /api
+
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.vtb.com.br
+
+# Sitemaps
+Sitemap: https://www.vtb.com.br/sitemap.xml

@@ -1,0 +1,88 @@
+.software-card {
+  max-width: 1000px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 5px;
+  border-color: #981e16;
+  border-style: solid;
+  padding: 15px;
+  border-width: 1px;
+
+  text-align: left;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+  display: grid;
+
+  gap: 10px;
+  place-items: start normal;
+}
+
+.software-image-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.anchor-software-container {
+  width: 20%;
+}
+
+.anchor-software {
+  display: block;
+  color: white;
+  width: 120px;
+  text-align: center;
+  background-color: #981e16;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color ease-in-out 0.15s, transform ease-in-out 0.15s;
+}
+
+.anchor-software:hover {
+  transform: scale(90%);
+  background-color: black;
+}
+
+.software-image {
+  width: 300px;
+  border-radius: 10px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.software-desc {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.software-tag {
+  display: flex;
+  align-items: center;
+}
+
+.software-tag button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1299px) {
+  .additional2 {
+    display: none;
+  }
+}
+
+@media (max-width: 990px) {
+  .software-card {
+    width: 300px;
+  }
+  .anchor-software {
+    width: 100%;
+  }
+  .additional {
+    display: none;
+  }
+}

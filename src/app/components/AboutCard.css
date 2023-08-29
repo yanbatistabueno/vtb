@@ -1,0 +1,34 @@
+.about-container {
+  margin-top: 40px;
+}
+.about-container h1 {
+  text-align: center;
+  color: #981e16;
+  margin-bottom: 40px;
+}
+.about-card {
+  display: flex;
+  margin-top: 20px;
+}
+
+.about-text-card {
+  background-color: #981e16;
+  width: 90%;
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  display: grid;
+  gap: 10px;
+}
+
+.about-text-cardr p {
+  font-weight: 300;
+}
+
+@media (max-width: 990px) {
+  .about-card {
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+}
