@@ -102,13 +102,14 @@ export default function FormContactUs(props) {
       <FormError error={errorType.error} nomeError={errorType.errorName} />
       <li className="li-disable">DÚVIDAS E SUGESTÕES</li>
       <h1>Preencha os Campos</h1>
-      <form onSubmit={submit} action="../phop">
+      <form onSubmit={submit} method="POST" action="http://localhost/php/contact-us.php">
         <input
           value={loginState.nome}
           onChange={(event) => handleChange(event, "nome")}
           placeholder="Seu nome"
           type="text"
           id="Nome"
+          name="nome"
         />
         <input
           value={loginState.email}
@@ -116,6 +117,7 @@ export default function FormContactUs(props) {
           type="email"
           id="Email"
           onChange={(event) => handleChange(event, "email")}
+          name="email"
         />
         <input
           value={loginState.telefone}
@@ -123,6 +125,7 @@ export default function FormContactUs(props) {
           type="text"
           id="Telefone"
           onChange={(event) => handleChange(event, "telefone")}
+          name="telefone"
         />
         <input
           value={loginState.empresa}
@@ -130,6 +133,7 @@ export default function FormContactUs(props) {
           type="text"
           id="Empresa"
           onChange={(event) => handleChange(event, "empresa")}
+          name="empresa"
         />
         <input
           value={loginState.assunto}
@@ -137,12 +141,14 @@ export default function FormContactUs(props) {
           type="text"
           id="Assunto"
           onChange={(event) => handleChange(event, "assunto")}
+          name="assunto"
         />
 
         <textarea
           placeholder="Mensagem"
           value={loginState.mensagem}
           id="mensagem"
+          name="mensagem"
           onChange={(event) => handleChange(event, "mensagem")}
         ></textarea>
         <button>Enviar</button>
