@@ -1,8 +1,8 @@
 import "./globals.css";
-// import { Poppins } from "next/font/google";
 import { Poppins } from "next/font/google";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { EmailProvider } from "@/app/context/EmailContext";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600"],

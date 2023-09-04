@@ -136,31 +136,32 @@ export default function UpgradeForm(props) {
   }
 
   function submit(e) {
-    e.preventDefault();
     handleError();
     console.log(Errors);
     if (handleError()) {
       console.log("sucesso! :)");
     } else {
       console.log("ops");
+      e.preventDefault();
     }
   }
-
   return (
     <div className="form-container">
       <h2>
         <span>Preencha o formulário</span>
       </h2>
-      <form onSubmit={submit} className="upgrade-form">
+      <form onSubmit={submit} method="POST" action="http://localhost/php/upgrade-software.php" className="upgrade-form">
         <input
           onChange={(event) => handleChange(event, "nome")}
           placeholder="Nome"
           id="Nome"
+          name="nome"
         />
         <input
           onChange={(event) => handleChange(event, "empresa")}
           placeholder="Empresa"
           id="Empresa"
+          name="empresa"
         />
 
         <div>
@@ -169,9 +170,9 @@ export default function UpgradeForm(props) {
             <p className="obrigatorio">Campo obrigatório*</p>
           </div>
           <select
-            onChange={(event) => handleChange(event, "ramo")}
-            name=""
+            name="ramo"
             id="Ramo de Atuação"
+            onChange={(event) => handleChange(event, "ramo")}
           >
             <option value="">Selecione</option>
             {ramosEmpresa.map((ramo) => {
@@ -184,28 +185,33 @@ export default function UpgradeForm(props) {
           placeholder="E-mail"
           id="E-mail"
           type="email"
+          name="email"
         />
         <div className="dual-inputs">
           <input
             onChange={(event) => handleChange(event, "telefone")}
             placeholder="Telefone"
             id="Telefone"
+            name="telefone"
           />
           <input
             onChange={(event) => handleChange(event, "celular")}
             placeholder="Celular"
             id="Celular"
+            name="celular"
           />
         </div>
         <input
           onChange={(event) => handleChange(event, "bairro")}
           placeholder="Bairro"
           id="Bairro"
+          name="bairro"
         />
         <input
           onChange={(event) => handleChange(event, "cidade")}
           placeholder="Cidade"
           id="Cidade"
+          name="cidade"
         />
         <div>
           <div className="select-info">
@@ -213,7 +219,7 @@ export default function UpgradeForm(props) {
             <p className="obrigatorio">Campo obrigatório*</p>
           </div>
           <select
-            name=""
+            name="estado"
             id="Estado"
             onChange={(event) => handleChange(event, "estado")}
           >
@@ -229,7 +235,7 @@ export default function UpgradeForm(props) {
             <p className="obrigatorio">Campo obrigatório*</p>
           </div>
           <select
-            name=""
+            name="software"
             id="Software"
             onChange={(event) => handleChange(event, "software")}
           >
@@ -243,6 +249,7 @@ export default function UpgradeForm(props) {
           onChange={(event) => handleChange(event, "serial")}
           placeholder="Serial Number"
           id="Serial Number"
+          name="serial"
         />
         <button className="send-form">Enviar</button>
       </form>
