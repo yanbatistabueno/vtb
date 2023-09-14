@@ -50,10 +50,7 @@ export default async function CourseName({ params }) {
         </p>
       </div>
       <div className="anchor-links">
-        <Link
-          href={`/contact-us?msg=soli&software=${Slugify(course[0].nome)}`}
-          className="anchor-button"
-        >
+        <Link href={`/course-proposal`} className="anchor-button">
           <div className="anchor-container">
             Proposta de curso
             <div className="anchor-icon">

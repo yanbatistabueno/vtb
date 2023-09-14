@@ -1,9 +1,10 @@
 "use client";
-import "./SoftwareProposalForm.css";
-import { useState } from "react";
-import telefoneValidation from "../../lib/telefoneValidation";
+
+import "./ConsultoryProposal.css";
+import React, { useState } from "react";
 import Input from "../FormProps/Input";
 import Select from "../FormProps/Select";
+import telefoneValidation from "../../lib/telefoneValidation";
 import mySqlAdjustment from "../FormProps/mySqlAdjustment";
 const ramosEmpresa = [
   "Agrícola",
@@ -26,18 +27,51 @@ const ramosEmpresa = [
   "Vidraria",
   "Outro",
 ];
+const estados = [
+  "AC",
+  "AL",
+  "AP",
+  "AM",
+  "BA",
+  "CE",
+  "DF",
+  "ES",
+  "GO",
+  "MA",
+  "MS",
+  "MT",
+  "MG",
+  "PA",
+  "PB",
+  "PR",
+  "PE",
+  "PI",
+  "RJ",
+  "RN",
+  "RS",
+  "RO",
+  "RR",
+  "SC",
+  "SP",
+  "SE",
+  "TO",
+];
 
-export default function UpgradeForm(props) {
+export default function CourseForm(props) {
   const [loginState, setLoginState] = useState({
     nome: "",
     email: "",
+    area: "",
     telefone: "",
     empresa: "",
     ramo: "",
-    software: "",
-    area: "",
-    licença: "",
-    sobrenome: "",
+    curso1: "",
+    curso2: "",
+    curso3: "",
+    curso4: "",
+    curso5: "",
+    curso6: "",
+    outro: "",
   });
 
   const [errorType, setErrorType] = useState({
@@ -53,7 +87,7 @@ export default function UpgradeForm(props) {
     AllInputs.map((input) => {
       if (input.getAttribute("obrigatorio") == "true" && input.value == "") {
         input.classList.add("error");
-        setInputErrorName(`Preencha o campo de ${input.id}`);
+        setInputErrorName(`${input.id} está vazio`);
         input.placeholder = `${input.id} está vazio`;
         Errors.push("Vazio");
       } else if (
@@ -65,6 +99,7 @@ export default function UpgradeForm(props) {
         Errors.pop;
       }
     });
+
     if (
       !telefoneValidation(AllInputs[4].value) &&
       AllInputs[4].value.length > 0
@@ -73,10 +108,8 @@ export default function UpgradeForm(props) {
       AllInputs[4].classList.add("error");
       AllInputs[4].placeholder = `${AllInputs[4].id} está incorreto`;
       setInputErrorName(`Telefone está incorreto`);
-    } else if (
-      telefoneValidation(AllInputs[4].value) &&
-      AllInputs[4].value.length > 0
-    ) {
+      // setLoginState({ ...loginState, telefone: "" });
+    } else if (telefoneValidation(AllInputs[4].value)) {
       AllInputs[4].classList.remove("error");
       AllInputs[4].placeholder = `${AllInputs[4].id}`;
       Errors.pop;
@@ -90,7 +123,12 @@ export default function UpgradeForm(props) {
       AllInputs[5].classList.add("error");
       AllInputs[5].placeholder = `${AllInputs[5].id} está incorreto`;
       setInputErrorName(`Celular está incorreto`);
-    } else {
+      // setLoginState({ ...loginState, telefone: "" });
+    } else if (
+      (telefoneValidation(AllInputs[5].value) &&
+        AllInputs[5].value.length > 0) ||
+      AllInputs[5].value.length == 0
+    ) {
       AllInputs[5].classList.remove("error");
       AllInputs[5].placeholder = `${AllInputs[5].id}`;
       Errors.pop;
@@ -103,7 +141,7 @@ export default function UpgradeForm(props) {
       ) {
         Errors.push("Select vazio");
         select.classList.add("error");
-        setInputErrorName(`Preencha o campo de ${select.id}`);
+        setInputErrorName(`${select.id} está vazio`);
       } else if (
         select.getAttribute("obrigatorio") == "true" &&
         select.value.length > 0
@@ -119,21 +157,23 @@ export default function UpgradeForm(props) {
     mySqlAdjustment(AllInputs[3], 40, Errors, setInputErrorName);
     mySqlAdjustment(AllInputs[4], 20, Errors, setInputErrorName);
     mySqlAdjustment(AllInputs[5], 20, Errors, setInputErrorName);
-
+    mySqlAdjustment(AllInputs[6], 100, Errors, setInputErrorName);
     if (Errors.length <= 0) {
       setInputErrorName("");
       return true;
     }
   }
-
   function handleChange(event, key) {
     setLoginState({ ...loginState, [key]: event.target.value });
   }
 
   function submit(e) {
     handleError();
-    if (!handleError()) {
+    if (handleError()) {
+      console.log("sucesso! :)");
+    } else {
       e.preventDefault();
+      console.log("ops");
     }
   }
   return (
@@ -144,81 +184,147 @@ export default function UpgradeForm(props) {
       <form
         onSubmit={submit}
         method="POST"
-        action="http://localhost/php/software-proposal.php"
-        className="proposal-form"
+        action="http://localhost/php/course-proposal.php"
+        className="consultory-form"
       >
         <Input
           nome="Nome"
-          onChange={(event) => handleChange(event, "nome")}
+          onChange={(event) =>
+            handleChange(
+              event,
+              event.target.altName ? event.target.altName : event.target.name
+            )
+          }
           obrigatorio
           propsValue={loginState.nome}
         />
         <Input
           nome="Empresa"
-          onChange={(event) => handleChange(event, "empresa")}
+          onChange={(event) =>
+            handleChange(
+              event,
+              event.target.altName ? event.target.altName : event.target.name
+            )
+          }
           obrigatorio
           propsValue={loginState.empresa}
         />
+        <Input
+          nome="Área de Trabalho"
+          onChange={(event) =>
+            handleChange(
+              event,
+              event.target.altName ? event.target.altName : event.target.name
+            )
+          }
+          altName="area"
+          propsValue={loginState.area}
+        />
         <Select
+          nome="Ramo de Atuação"
           arrayOptions={ramosEmpresa.map((ramo) => {
             return ramo;
           })}
-          nome="Ramo de Atuação"
           altName="ramo"
           onChange={(event) => handleChange(event, "ramo")}
         />
         <Input
-          nome="Área em que trabalha"
-          altName="area"
-          onChange={(event) => handleChange(event, "area")}
-          propsValue={loginState.area}
-        />
-        <Input
           nome="E-mail"
+          onChange={(event) =>
+            handleChange(
+              event,
+              event.target.altName ? event.target.altName : event.target.name
+            )
+          }
           altName="email"
-          onChange={(event) => handleChange(event, "email")}
-          propsValue={loginState.email}
           obrigatorio
+          propsValue={loginState.email}
         />
-
         <div className="dual-inputs">
           <Input
             nome="Telefone"
-            onChange={(event) => handleChange(event, "telefone")}
-            propsValue={loginState.telefone}
+            onChange={(event) =>
+              handleChange(
+                event,
+                event.target.altName ? event.target.altName : event.target.name
+              )
+            }
             obrigatorio
+            propsValue={loginState.telefone}
           />
           <Input
             nome="Celular"
-            onChange={(event) => handleChange(event, "celular")}
+            onChange={(event) =>
+              handleChange(
+                event,
+                event.target.altName ? event.target.altName : event.target.name
+              )
+            }
             propsValue={loginState.celular}
           />
         </div>
-        <Select
-          arrayOptions={props.data.map((software) => {
-            return software.nome;
-          })}
-          nome="Software"
-          altName="software"
-          onChange={(event) => handleChange(event, "software")}
-          obrigatorio
-        />
-        <Select
-          arrayOptions={[
-            "1",
-            "2",
-            "3",
-            "4",
-            "5 a 10",
-            "11 a 20",
-            "21 a 50",
-            "50 a 100",
-            "Ilimitada",
-          ]}
-          nome="Número de Licenças"
-          altName="licenca"
-          onChange={(event) => handleChange(event, "licenca")}
-          obrigatorio
+        <ul className="select-list">
+          <Select
+            nome="1ª opção"
+            arrayOptions={props.data.map((data) => {
+              return data.nome;
+            })}
+            altName="1opcao"
+            onChange={(event) => handleChange(event, "curso1")}
+            obrigatorio
+          />
+          <Select
+            nome="2ª opção"
+            arrayOptions={props.data.map((data) => {
+              return data.nome;
+            })}
+            altName="2opcao"
+            onChange={(event) => handleChange(event, "curso2")}
+          />
+          <Select
+            nome="3ª opção"
+            arrayOptions={props.data.map((data) => {
+              return data.nome;
+            })}
+            altName="3opcao"
+            onChange={(event) => handleChange(event, "curso3")}
+          />
+        </ul>
+        <ul className="select-list">
+          <Select
+            nome="4ª opção"
+            arrayOptions={props.data.map((data) => {
+              return data.nome;
+            })}
+            altName="4opcao"
+            onChange={(event) => handleChange(event, "curso4")}
+          />
+          <Select
+            nome="5ª opção"
+            arrayOptions={props.data.map((data) => {
+              return data.nome;
+            })}
+            altName="5opcao"
+            onChange={(event) => handleChange(event, "curso5")}
+          />
+          <Select
+            nome="6ª opção"
+            arrayOptions={props.data.map((data) => {
+              return data.nome;
+            })}
+            altName="6opcao"
+            onChange={(event) => handleChange(event, "curso6")}
+          />
+        </ul>
+        <Input
+          nome="Outro"
+          onChange={(event) =>
+            handleChange(
+              event,
+              event.target.altName ? event.target.altName : event.target.name
+            )
+          }
+          propsValue={loginState.outro}
         />
         <button className="send-form">Enviar</button>
       </form>

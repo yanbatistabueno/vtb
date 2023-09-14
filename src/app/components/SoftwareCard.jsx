@@ -14,17 +14,17 @@ export default function SoftwareCard(props) {
       <div className="software-image-container">
         <img
           className="software-image"
-          src={`software-images/${Slugify(props.softwareNome)}.png`}
+          src={`/software-images/${Slugify(props.softwareNome)}.png`}
           alt=""
         />
         <img
           className="software-image additional"
-          src={`software-images/${Slugify(props.softwareNome)}-2.png`}
+          src={`/software-images/${Slugify(props.softwareNome)}-2.png`}
           alt=""
         />
         <img
           className="software-image additional2"
-          src={`software-images/${Slugify(props.softwareNome)}-3.png`}
+          src={`/software-images/${Slugify(props.softwareNome)}-3.png`}
           alt=""
         />
       </div>

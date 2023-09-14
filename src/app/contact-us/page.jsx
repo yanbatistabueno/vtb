@@ -1,13 +1,13 @@
 import "./ContactUs.css";
 
 import FormContactUs from "../components/FormContactUs";
-export default function FaleConosco({ searchParams }) {
+export default function FaleConosco({ useSearchParams }) {
   return (
     <main>
       <h1>Fale Conosco</h1>
 
       <div className="contact-container">
-        <FormContactUs id="form" params={searchParams} />
+        <FormContactUs id="form" params={useSearchParams} />
         <div className="contact-card">
           <li className="li-disable">DETALHES DE CONTATO</li>
           <h1>Nossos Contatos</h1>
@@ -18,7 +18,7 @@ export default function FaleConosco({ searchParams }) {
           </p>
           <div>
             <div className="contact-info">
-              <img className="contact-icon" src="earth-icon.png" alt="" />
+              <img className="contact-icon" src="/earth-icon.png" alt="" />
               <div>
                 <h3>ENDEREÇO:</h3>
                 <p>
@@ -28,14 +28,14 @@ export default function FaleConosco({ searchParams }) {
               </div>
             </div>
             <div className="contact-info">
-              <img className="contact-icon" src="whatsapp-icon.png" alt="" />
+              <img className="contact-icon" src="/whatsapp-icon.png" alt="" />
               <div>
                 <h3>TELEFONE:</h3>
                 <p>(11) 99274-8577</p>
               </div>
             </div>
             <div className="contact-info">
-              <img className="contact-icon" src="email-icon.png" alt="" />
+              <img className="contact-icon" src="/email-icon.png" alt="" />
               <div>
                 <h3>E-MAILS:</h3>
                 <p>softwares@vtb.com.br</p>
@@ -43,7 +43,7 @@ export default function FaleConosco({ searchParams }) {
               </div>
             </div>
             <div className="contact-info">
-              <img className="contact-icon" src="skype-icon.png" alt="" />
+              <img className="contact-icon" src="/skype-icon.png" alt="" />
               <div>
                 <h3>SKYPE:</h3>
                 <p>vtb.suporte.softwares</p>

@@ -4,18 +4,18 @@
   gap: 20px;
   position: relative;
 }
-.upgrade-form {
+.proposal-form {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
 
-.upgrade-form select {
+.proposal-form select {
   width: 200px;
 }
 
-.upgrade-form input,
-.upgrade-form select {
+.proposal-form input,
+.proposal-form select {
   padding: 10px 15px;
   border-radius: 10px;
   border-style: solid;
@@ -26,6 +26,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  align-items: end;
+}
+
+.proposal-form div input {
+  width: 100%;
+}
+.proposal-form input {
+  height: 48px;
 }
 
 form button {
@@ -45,8 +53,7 @@ form button:hover {
 }
 
 .error {
-  border-color: red;
-  transition: background-color 15s;
+  border-color: #981e16;
 }
 
 .select-info {
@@ -57,11 +64,15 @@ form button:hover {
 
 .obrigatorio {
   font-size: 10px;
+  color: #981e16;
 }
 
 @media (max-width: 990px) {
-  .upgrade-form {
-    align-items: normal;
+  .form-container {
+    margin-top: 10px;
+  }
+  .proposal-form {
+    align-items: center;
   }
   .form-container h2 {
     text-align: center;
@@ -69,10 +80,13 @@ form button:hover {
   .dual-inputs {
     grid-template-columns: 1fr;
   }
-  form button {
+  .form-container form button {
     width: 100%;
   }
-  .upgrade-form select {
+  .form-container form {
+    margin-top: 0px;
+  }
+  .proposal-form select {
     width: 100%;
   }
   .upgrade-tag-error {

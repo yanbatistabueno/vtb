@@ -4,18 +4,18 @@
   gap: 20px;
   position: relative;
 }
-.upgrade-form {
+.consultory-form {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
 
-.upgrade-form select {
+.consultory-form select {
   width: 200px;
 }
 
-.upgrade-form input,
-.upgrade-form select {
+.consultory-form input,
+.consultory-form select {
   padding: 10px 15px;
   border-radius: 10px;
   border-style: solid;
@@ -29,11 +29,17 @@
   align-items: end;
 }
 
-.upgrade-form div input {
+.consultory-form div input {
   width: 100%;
 }
-.upgrade-form input {
+.consultory-form input {
   height: 48px;
+}
+
+.select-list {
+  padding: 0px;
+  display: flex;
+  gap: 20px;
 }
 
 form button {
@@ -69,7 +75,7 @@ form button:hover {
 }
 
 @media (max-width: 990px) {
-  .upgrade-form {
+  .consultory-form {
     align-items: normal;
   }
   .form-container h2 {
@@ -81,7 +87,7 @@ form button:hover {
   form button {
     width: 100%;
   }
-  .upgrade-form select {
+  .consultory-form select {
     width: 100%;
   }
   .upgrade-tag-error {

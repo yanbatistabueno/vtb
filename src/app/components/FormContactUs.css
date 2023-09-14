@@ -57,30 +57,56 @@ textarea {
   width: 100%;
 }
 .error {
-  border-color: red;
+  border-color: #981e16;
   transition: background-color 15s;
   display: block;
 }
-
+.contact-us div {
+  width: 100%;
+}
+.contact-us div input {
+  width: 100%;
+}
+.contact-us input {
+  height: 48px;
+}
 .error-tag {
+  margin-top: 20px;
+}
+/* .error-tag {
   position: absolute;
   bottom: -40px;
   left: 20px;
+} */
+
+.select-info {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.obrigatorio {
+  font-size: 10px;
+  color: #981e16;
+}
+
+.contact-summary select {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
 }
 @media (max-width: 990px) {
   form {
     align-items: center;
   }
-  .contact-summary {
+  .error-tag {
+    position: static;
+    bottom: 0;
     text-align: center;
+    left: 0;
   }
   form button {
     width: 80%;
-  }
-  .error-tag {
-    position: absolute;
-    bottom: -30px;
-    left: 0px;
-    right: 0px;
   }
 }
