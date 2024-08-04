@@ -1,24 +1,45 @@
-import AboutCard from "./AboutCard";
-
+import "./AboutCard.css";
+import Link from "next/link";
 function Container() {
   return (
     <div className="about-container">
-      <h1>Por que contratar a VTB?</h1>
-      <AboutCard
-        h2Text="Somos o destino único para atender todas as necessidades da sua
-          empresa em serviços de tecnologia e desenvolvimento."
-        pText="Com mais de 40 anos de experiência em desenvolvimento e consultoria de
-        software, atendemos desde startups até empresas listadas na bolsa de
-        valores. Nossa diversidade de habilidades e metodologia ajudam você a
-        alcançar seus objetivos, independentemente da fase do seu negócio."
-        side="right"
-      />
-      <AboutCard
-        h2Text="Pioneira em CEP: Treinamento, Implantação e Desenvolvimento de Softwares de Qualidade"
-        pText="É pioneira no treinamento e implantação do CEP - Controle Estatístico do Processo. Tem registro no SINMETRO / INMETRO sob número 825/91, como entidade integrante do Sistema Nacional de Metrologia, Normalização e Qualidade Industrial.
-        Desenvolve e mantém contínuo aperfeiçoamento nos Softwares de CEP, MSA, FMEA, GESTÃO DA QUALIDADE, HACCP, CALIBRAÇÃO DE INSTRUMENTOS e CONFIABILIDADE."
-        side="left"
-      />
+      <h1>Cursos / Treinamentos</h1>
+      <div className="about-card">
+        <div className="about-text-card">
+          <h2>
+            Mais de 100.000 profissionais treinados em pequenas, médias e
+            grandes empresas.
+          </h2>
+          <p>
+            Treinamentos voltados para as áreas da Qualidade, Engenheira,
+            Manufatura, Gestão e Operacional. Adequação dos treinamentos à
+            necessidade do cliente com customização do material didático e carga
+            horária. Treinamentos ministrados na modalidade In Company e
+            Online/EAD. Veja
+            <Link href={"/courses"}>
+              <b> aqui </b>
+            </Link>
+            no catálogo completo de cursos
+          </p>
+        </div>
+      </div>
+      <h1>Por que a VTB?</h1>
+      <div className="about-card">
+        <div className="about-text-card">
+          <h2>
+            Pioneira em CEP: Treinamento, Implantação e Desenvolvimento de
+            Softwares de Qualidade.
+          </h2>
+          <p>
+            É pioneira no treinamento e implantação do CEP - Controle
+            Estatístico do Processo. Tem registro no SINMETRO / INMETRO sob
+            número 825/91, como entidade integrante do Sistema Nacional de
+            Metrologia, Normalização e Qualidade Industrial. Desenvolve e mantém
+            contínuo aperfeiçoamento nos Softwares de CEP, MSA, FMEA, GESTÃO DA
+            QUALIDADE, HACCP, CALIBRAÇÃO DE INSTRUMENTOS e CONFIABILIDADE.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

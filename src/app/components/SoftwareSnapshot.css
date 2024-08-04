@@ -1,0 +1,39 @@
+.software-snapshot-container {
+  width: 720px;
+  position: relative;
+
+  padding: 0px 20px;
+}
+
+.software-snapshot-container button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 0px;
+  background-color: transparent;
+}
+
+.software-snapshot-container button img {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.software-full-preview {
+  width: 1280px;
+  height: 720px;
+  position: fixed;
+}
+
+.software-full-preview img {
+  width: 90%;
+  height: 90%;
+}
+
+@media (max-width: 990px) {
+  .software-snapshot-container {
+    width: 100%;
+    height: 100%;
+  }
+}

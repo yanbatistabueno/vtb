@@ -123,6 +123,11 @@ nav .flag-icon:hover {
   transform: scale(90%);
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
 .hamburguer-menu {
   display: none;
   background-color: transparent;

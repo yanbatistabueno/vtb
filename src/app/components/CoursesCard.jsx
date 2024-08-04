@@ -7,28 +7,18 @@ function CoursesCard(props) {
   }
   return (
     <div key={props.CourseNome} className="course-card">
-      <p>{props.courseNome}</p>
-      <div className="course-card-tag course-card-tag-container">
-        <p>Tipo:</p>
-        <button onClick={props.onClick}>
-          <span>
-            <p>{props.courseTipo}</p>
-          </span>
-        </button>
-      </div>
+      <Link
+        onClick={returnCourse}
+        href={`/courses/${Slugify(props.courseNome)}`}
+      >
+        {props.courseNome}
+      </Link>
       <div className="course-card-tag">
         <p>Duração:</p>
         <p>
           <span>{props.courseTime}</span>
         </p>
       </div>
-      <Link
-        className="anchor-course"
-        onClick={returnCourse}
-        href={`/courses/${Slugify(props.courseNome)}`}
-      >
-        Saiba Mais
-      </Link>
     </div>
   );
 }

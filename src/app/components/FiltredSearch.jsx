@@ -116,9 +116,7 @@ export default function SearchInput(props) {
                       <CoursesCard
                         key={element.nome}
                         courseNome={element.nome}
-                        courseTipo={element.tag}
-                        courseTime={element.time}
-                        onClick={changeFilter}
+                        courseTime={element.tempo}
                       />
                     );
                   }
@@ -129,23 +127,94 @@ export default function SearchInput(props) {
         </div>
       )}
       {props.type == "clients" && (
-        <div className="clients-list">
-          {filtredTags.map((tag) => {
-            return (
-              <div key={tag} className="filtred-courses">
-                <div className="tag-container">
-                  <h2>
-                    <span>{tag}</span>
-                  </h2>
-                </div>
-                {filtredData.map((element) => {
-                  if (element.nome.charAt(0) == tag) {
-                    return <p key={element.nome}>{element.nome}</p>;
-                  }
-                })}
-              </div>
-            );
-          })}
+        <div className="clients-container">
+          <div className="clients-list">
+            {filtredTags.map((tag) => {
+              if (
+                tag == "A" ||
+                tag == "Á" ||
+                tag == "D" ||
+                tag == "G" ||
+                tag == "J" ||
+                tag == "M" ||
+                tag == "P" ||
+                tag == "S" ||
+                tag == "V"
+              )
+                return (
+                  <div key={tag} className="filtred-clients">
+                    <div className="tag-container">
+                      <h2>
+                        <span>{tag}</span>
+                      </h2>
+                    </div>
+                    {filtredData.map((element) => {
+                      if (element.nome.charAt(0) == tag) {
+                        return <li key={element.nome}>{element.nome}</li>;
+                      }
+                    })}
+                  </div>
+                );
+            })}
+          </div>
+          <div className="clients-list">
+            {filtredTags.map((tag) => {
+              if (
+                tag == "B" ||
+                tag == "E" ||
+                tag == "H" ||
+                tag == "K" ||
+                tag == "N" ||
+                tag == "Q" ||
+                tag == "T" ||
+                tag == "W" ||
+                tag == "Z"
+              )
+                return (
+                  <div key={tag} className="filtred-clients">
+                    <div className="tag-container">
+                      <h2>
+                        <span>{tag}</span>
+                      </h2>
+                    </div>
+                    {filtredData.map((element) => {
+                      if (element.nome.charAt(0) == tag) {
+                        return <li key={element.nome}>{element.nome}</li>;
+                      }
+                    })}
+                  </div>
+                );
+            })}
+          </div>
+          <div className="clients-list">
+            {filtredTags.map((tag) => {
+              if (
+                tag == "C" ||
+                tag == "F" ||
+                tag == "I" ||
+                tag == "L" ||
+                tag == "O" ||
+                tag == "R" ||
+                tag == "U" ||
+                tag == "Y" ||
+                tag == "3"
+              )
+                return (
+                  <div key={tag} className="filtred-clients">
+                    <div className="tag-container">
+                      <h2>
+                        <span>{tag}</span>
+                      </h2>
+                    </div>
+                    {filtredData.map((element) => {
+                      if (element.nome.charAt(0) == tag) {
+                        return <li key={element.nome}>{element.nome}</li>;
+                      }
+                    })}
+                  </div>
+                );
+            })}
+          </div>
         </div>
       )}
       {filtredData.length == 0 && (

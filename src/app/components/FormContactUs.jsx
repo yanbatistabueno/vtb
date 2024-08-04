@@ -183,7 +183,7 @@ export default function FormContactUs() {
       <form
         onSubmit={submit}
         method="POST"
-        action="http://localhost/php/contact-us.php"
+        action="../php/contact-us.php"
         className="contact-us"
       >
         <Input

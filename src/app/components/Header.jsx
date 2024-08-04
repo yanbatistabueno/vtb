@@ -60,7 +60,10 @@ function Header() {
         </div>
       </div>
       <div className="header">
-        <img className="logo" src="/vtb-logo.png" alt="icon logo vtb" />
+        <Link className="logo-container" href="/">
+          <img className="logo" src="/vtb-logo.png" alt="icon logo vtb" />
+        </Link>
+
         <button className="hamburguer-menu" onClick={openNav}>
           <Image
             width={40}

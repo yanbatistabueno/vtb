@@ -10,4 +10,14 @@
   display: flex;
   gap: 10px;
   flex-direction: column;
+  list-style: inside;
+}
+
+@media (max-width: 990px) {
+  .list-container {
+    text-align: center;
+  }
+  .item-list {
+    padding: 0px;
+  }
 }

@@ -71,4 +71,25 @@
 }
 
 @media (max-width: 990px) {
+  .unordered-list {
+    text-align: center;
+  }
+  .unordered-list ul {
+    padding: 0px;
+    list-style: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .consultory-container .anchor-links {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .capacitação {
+    text-align: center;
+  }
+  .capacitação ol {
+    padding-left: 10px;
+  }
 }

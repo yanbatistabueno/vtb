@@ -3,7 +3,7 @@ import "./Consultory.css";
 import Link from "next/link";
 export default function Consultory() {
   return (
-    <main>
+    <main className="consultory-container">
       <h1>Consultoria</h1>
       <div className="unordered-list">
         <p>

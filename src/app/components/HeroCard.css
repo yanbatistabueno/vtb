@@ -1,18 +1,17 @@
 .hero-card {
-  display: flex;
-  align-items: center;
   gap: 20px;
+  margin-bottom: 20px;
 }
 
 .hero-card h1 {
-  text-align: left;
+  text-align: center;
 }
 
 .hero-text {
-  width: 60%;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  text-align: center;
 }
 
 .hero-image {
@@ -52,7 +51,6 @@
     flex-direction: column;
   }
   .hero-text {
-    width: 80%;
     text-align: center;
   }
   .hero-buttons {

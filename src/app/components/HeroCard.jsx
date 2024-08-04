@@ -1,30 +1,27 @@
 import "./HeroCard.css";
-import Image from "next/image";
+import Link from "next/link";
 function HeroCard() {
   return (
     <div className="hero-card">
       <div className="hero-text">
         <h1>
-          Construindo um futuro com <span>software</span> e
-          <span> tecnologia de qualidade!</span>
+          Construindo um futuro com <span>treinamentos especializados</span>,
+          <span> softwares</span> e <span>tecnologia de qualidade!</span>
         </h1>
-        <p>
-          Nossa missão é impulsionar seu progresso por meio da tecnologia.
-          Agende uma reunião com um de nossos consultores agora mesmo para dar o
-          próximo passo.
-        </p>
-        <div className="hero-buttons">
-          <button className="começe-agora">Comece agora</button>
-          <button className="como-funciona">Como funciona?</button>
-        </div>
+        <h2>
+          Nossos softwares facilitam a implementação e gerenciamento das
+          principais ferramentas da qualidade. Softwares com interface
+          simplificada e de fácil manuseio podendo ser utilizados diretamente em
+          chão de fábrica ou em laboratórios.
+        </h2>
+        <h1>
+          Clique
+          <Link href={"/softwares"}>
+            <b> aqui </b>
+          </Link>
+          para ver nosso cátalogo completo.
+        </h1>
       </div>
-      <Image
-        className="hero-image"
-        src="/develop-image.png"
-        alt="deveplopment illustrative image"
-        width={500}
-        height={500}
-      />
     </div>
   );
 }

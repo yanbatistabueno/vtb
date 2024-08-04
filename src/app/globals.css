@@ -52,6 +52,10 @@ body {
   position: relative;
 }
 
+a {
+  color: #981e16;
+}
+
 html,
 /*  */
 #app,

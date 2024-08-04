@@ -35,18 +35,14 @@ export default async function CourseName({ params }) {
           </p>
           <ul>
             {course[0].programa.map(function (e) {
-              return (
-                <li key={e}>
-                  <span>{e}</span>
-                </li>
-              );
+              return <li dangerouslySetInnerHTML={{ __html: e }}></li>;
             })}
           </ul>
         </div>
 
         <p>
           <b>Carga Horária: </b>
-          {course[0].time}
+          {course[0].tempo}
         </p>
       </div>
       <div className="anchor-links">

@@ -22,11 +22,11 @@ export default function SoftwareCard(props) {
           src={`/software-images/${Slugify(props.softwareNome)}-2.png`}
           alt=""
         />
-        <img
+        {/* <img
           className="software-image additional2"
           src={`/software-images/${Slugify(props.softwareNome)}-3.png`}
           alt=""
-        />
+        /> */}
       </div>
       <p className="software-desc">{props.softwareDesc}</p>
       {props.softwareAnchor && (

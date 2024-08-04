@@ -182,7 +182,7 @@ export default function UpgradeForm(props) {
       <form
         onSubmit={submit}
         method="POST"
-        action="http://localhost/php/upgrade-software.php"
+        action="../php/upgrade-software.php"
         className="upgrade-form"
       >
         <Input

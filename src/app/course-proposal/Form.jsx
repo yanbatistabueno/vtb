@@ -190,7 +190,7 @@ export default function CourseForm(props) {
       <form
         onSubmit={submit}
         method="POST"
-        action="http://localhost/php/course-proposal.php"
+        action="../php/course-proposal.php"
         className="course-form"
       >
         <Input

@@ -8,11 +8,11 @@ export default function Footer() {
           <h2>Menu</h2>
           <div className="footer-links-container">
             <Link href={"/"}>HOME</Link>
-            <Link href={"/"}>SOFTWARES</Link>
-            <Link href={"/"}>CONSULTORIA / AUDITORIA</Link>
-            <Link href={"/"}>CURSOS</Link>
-            <Link href={"/"}>CLIENTES</Link>
-            <Link href={"/"}>FALE CONOSCO</Link>
+            <Link href={"/softwares"}>SOFTWARES</Link>
+            <Link href={"/consultory"}>CONSULTORIA / AUDITORIA</Link>
+            <Link href={"/courses"}>CURSOS</Link>
+            <Link href={"/clients"}>CLIENTES</Link>
+            <Link href={"/contact-us"}>FALE CONOSCO</Link>
           </div>
         </div>
         <div>

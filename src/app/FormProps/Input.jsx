@@ -3,7 +3,7 @@ export default function Input(props) {
     <div>
       {props.obrigatorio && <p className="obrigatorio">Campo Obrigatório*</p>}
       <input
-        type="text"
+        type={props.altName == "email" ? "email" : "text"}
         placeholder={props.nome}
         id={props.nome}
         name={props.altName ? props.altName : props.nome.toLowerCase()}

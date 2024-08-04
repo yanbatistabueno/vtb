@@ -26,9 +26,6 @@ export default function Politics() {
             Qualidade e dos resultados do negócio.
           </li>
         </ul>
-        <div className="list-logo">
-          <img src="/product-quality.png" />
-        </div>
       </div>
     </div>
   );

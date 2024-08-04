@@ -14,11 +14,7 @@ export default async function UserList() {
   return (
     <main>
       <h1>Lista de Cursos</h1>
-      <FiltredSearch
-        tags={tags} //Apenas adicione uma tag que exista em um dos items da database
-        type="course"
-        data={courses}
-      />
+      <FiltredSearch tags={tags} type="course" data={courses} />
     </main>
   );
 }
